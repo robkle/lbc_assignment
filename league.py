@@ -1,13 +1,11 @@
-#!/usr/bin/env python3
-
 class LeagueTable:
 	def __init__(self, lst):
-		self.players = {}
 		if not type(lst) is list:
-			raise TypeError("Only list of strings is allowed")
+			raise TypeError("Only an empty list or list of type str is allowed.")
+		self.players = {}
 		for i in lst:
 			if not type(i) is str:
-				raise TypeError("Only list of strings is allowed")
+				raise TypeError("Only type str allowed.")
 			self.players[i] = 0
 	
 	def add_result(self, player, score = 0):
